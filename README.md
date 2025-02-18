@@ -81,7 +81,7 @@ To erase the virtual surroundings simply erase the folder that is to create in c
 >
 > ``` python manage.py migrate  ```
 >
-> ``` python manage.py loaddata Library/fixtures/initial_date.json ```
+> ``` python manage.py loaddata biblioteca/fixtures/initial_data.json ```
 >
 > If we want to do an erased massive can do this comanda:
 > ``` rm db.sqlite3 ```

@@ -1,0 +1,150 @@
+{% extends 'index.html' %}
+{% block content %}
+    <div class="container mt-5">
+        <div class="has-text-centered">
+            <h1 class="is-size-1">Update Manga</h1>
+        </div>
+        <br>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <!-- User input fields -->
+            <div class="columns">
+                <div class="column">
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <div class="control">
+                            <input class="input" type="text" name="name" value="{{ manga.name }}" required>
+                        </div>
+                    </div>
+
+                    <!-- <div class="field">
+                        <label class="label">Photo</label>
+                        <div class="control">
+                            <input class="input" type="file" name="photo">
+                        </div>
+                    </div> -->
+
+                    <div class="field">
+                        <label class="label">Observations</label>
+                        <div class="control">
+                            <textarea class="textarea is-small" name="observations">{{ manga.observations }}</textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="field">
+                        <label class="label">Owned</label>
+                        <div class="control">
+                            <input class="input is-small" type="number" name="owned" value="{{ manga.owned }}" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Total Books</label>
+                        <div class="control">
+                            <input class="input is-small" type="number" name="total_books" value="{{ manga.total_books }}" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Average Price</label>
+                        <div class="control">
+                            <input class="input is-small" type="number" step="0.01" name="avg_price" value="{{ manga.avg_price }}" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Total Spend</label>
+                        <div class="control">
+                            <input class="input is-small" type="number" step="0.01" name="total_spend" value="{{ manga.total_spend }}" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Selection fields -->
+            <div class="columns is-multiline is-centered">
+                <!-- Status Field -->
+                <div class="column is-one-quarter">
+                    <div class="field">
+                        <label class="label">Status</label>
+                        <div class="control">
+                            <div class="select is-small">
+                                <select name="status_id" required>
+                                    {% for status in statuses %}
+                                        <option value="{{ status.id }}" {% if manga.status_id.id == status.id %}selected{% endif %}>
+                                            {{ status.name }}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Origin Field -->
+                <div class="column is-one-quarter">
+                    <div class="field">
+                        <label class="label">Origin</label>
+                        <div class="control">
+                            <div class="select is-small">
+                                <select name="origin_id" required>
+                                    {% for origin in origins %}
+                                        <option value="{{ origin.id }}" {% if manga.origin_id.id == origin.id %}selected{% endif %}>
+                                            {{ origin.name }}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Language Field -->
+                <div class="column is-one-quarter">
+                    <div class="field">
+                        <label class="label">Language</label>
+                        <div class="control">
+                            <div class="select is-small">
+                                <select name="language_id" required>
+                                    {% for language in languages %}
+                                        <option value="{{ language.id }}" {% if manga.language_id.id == language.id %}selected{% endif %}>
+                                            {{ language.name_short }}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Type Field -->
+                <div class="column is-one-quarter">
+                    <div class="field">
+                        <label class="label">Type</label>
+                        <div class="control">
+                            <div class="select is-small">
+                                <select name="type_id" required>
+                                    {% for type in types %}
+                                        <option value="{{ type.id }}" {% if manga.type_id.id == type.id %}selected{% endif %}>
+                                            {{ type.name }}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="field has-text-centered">
+                <div class="control">
+                    <button class="button is-warning" type="submit">Update Manga</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

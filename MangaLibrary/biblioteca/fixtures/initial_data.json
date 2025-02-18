@@ -1,0 +1,184 @@
+[
+  {
+    "model": "biblioteca.Status",
+    "pk": 1,
+    "fields": {
+      "name": "Completed"
+    }
+  },
+  {
+    "model": "biblioteca.Status",
+    "pk": 2,
+    "fields": {
+      "name": "Ongoing"
+    }
+  },
+  {
+    "model": "biblioteca.Status",
+    "pk": 3,
+    "fields": {
+      "name": "Hiatus"
+    }
+  },
+
+  {
+    "model": "biblioteca.Origin",
+    "pk": 1,
+    "fields": {
+      "name": "First hand"
+    }
+  },
+  {
+    "model": "biblioteca.Origin",
+    "pk": 2,
+    "fields": {
+      "name": "Mixt"
+    }
+  },
+  {
+    "model": "biblioteca.Origin",
+    "pk": 3,
+    "fields": {
+      "name": "Second Hand"
+    }
+  },
+  
+  {
+    "model": "biblioteca.Type",
+    "pk": 1,
+    "fields": {
+      "name": "Manga"
+    }
+  },
+  {
+    "model": "biblioteca.Type",
+    "pk": 2,
+    "fields": {
+      "name": "Manhwa"
+    }
+  },
+  {
+    "model": "biblioteca.Type",
+    "pk": 3,
+    "fields": {
+      "name": "Manhua"
+    }
+  },
+  {
+    "model": "biblioteca.Type",
+    "pk": 4,
+    "fields": {
+      "name": "Light Novel"
+    }
+  },
+  {
+    "model": "biblioteca.Type",
+    "pk": 5,
+    "fields": {
+      "name": "Fan Book/Guide Book"
+    }
+  },
+  {
+    "model": "biblioteca.Type",
+    "pk": 6,
+    "fields": {
+      "name": "Art Book"
+    }
+  },
+  {
+    "model": "biblioteca.Type",
+    "pk": 7,
+    "fields": {
+      "name": "DVD/Bly-Ray"
+    }
+  },
+  {
+    "model": "biblioteca.Type",
+    "pk": 8,
+    "fields": {
+      "name": "Other"
+    }
+  },
+
+  {
+    "model": "biblioteca.Language",
+    "pk": 1,
+    "fields": {
+        "name": "Catalan",
+        "name_short": "CAT"
+    }
+  },
+  {
+    "model": "biblioteca.Language",
+    "pk": 2,
+    "fields": {
+        "name": "Spanish",
+        "name_short": "ES"
+    }
+  },
+  {
+    "model": "biblioteca.Language",
+    "pk": 3,
+    "fields": {
+        "name": "English",
+        "name_short": "EN"
+    }
+  },
+  {
+    "model": "biblioteca.Language",
+    "pk": 4,
+    "fields": {
+        "name": "French",
+        "name_short": "FR"
+    }
+  },
+  {
+    "model": "biblioteca.Language",
+    "pk": 5,
+    "fields": {
+        "name": "Italian",
+        "name_short": "IT"
+    }
+  },
+  {
+    "model": "biblioteca.Language",
+    "pk": 6,
+    "fields": {
+        "name": "Japanese",
+        "name_short": "JP"
+    }
+  },
+  {
+    "model": "biblioteca.Language",
+    "pk": 7,
+    "fields": {
+        "name": "Korean",
+        "name_short": "KR"
+    }
+  },
+  {
+    "model": "biblioteca.Language",
+    "pk": 8,
+    "fields": {
+        "name": "Chinese",
+        "name_short": "CN"
+    }
+  },
+  {
+    "model": "biblioteca.Language",
+    "pk": 9,
+    "fields": {
+        "name": "German",
+        "name_short": "DE"
+    }
+  },
+  {
+    "model": "biblioteca.Language",
+    "pk": 10,
+    "fields": {
+        "name": "Portuguese",
+        "name_short": "PT"
+    }
+  }
+
+]

@@ -1,0 +1,89 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <!-- Manga Details Section -->
+    <div class="box">
+        <div class="columns">
+            <!-- Manga Image -->
+            <div class="column is-one-third has-text-centered">
+                <figure class="image is-3by4">
+                    {% if manga.photo %}
+                        <img src="{{ manga.photo.url }}" alt="{{ manga.name }}" class="has-shadow" style="border: 2px solid black;">
+                    {% else %}
+                        <p>No image available</p>
+                    {% endif %}
+                </figure>
+            </div>
+
+            <!-- Manga Details -->
+            <div class="column">
+                <h1 class="title has-text-centered">{{ manga.name }}</h1>
+
+                <table class="table is-striped is-bordered is-hoverable is-fullwidth">
+                    <tbody>
+                        <tr>
+                            <td class="has-text-centered"><strong>Status:</strong></td>
+                            <td class="has-text-centered">{{ manga.status_id.name }}</td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered"><strong>Origin:</strong></td>
+                            <td class="has-text-centered">{{ manga.origin_id.name }}</td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered"><strong>Language:</strong></td>
+                            <td class="has-text-centered">{{ manga.language_id.name }}</td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered"><strong>Type:</strong></td>
+                            <td class="has-text-centered">{{ manga.type_id.name }}</td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered"><strong>Owned Copies:</strong></td>
+                            <td class="has-text-centered">{{ manga.owned }}</td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered"><strong>Total Books:</strong></td>
+                            <td class="has-text-centered">
+                                {% if manga.total_books == 0 %}
+                                    ?
+                                {% else %}
+                                    {{ manga.total_books }}
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered"><strong>Average Price:</strong></td>
+                            <td class="has-text-centered">{{ manga.avg_price }} €</td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered"><strong>Total Spend:</strong></td>
+                            <td class="has-text-centered">{{ manga.total_spend }} €</td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered"><strong>Observations:</strong></td>
+                            <td class="has-text-centered">
+                                {% if manga.observations %}
+                                    {{ manga.observations }}
+                                {% else %}
+                                    No observations
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Edit and Delete Buttons -->
+                <div class="columns is-centered mt-5">
+                    <div class="column is-narrow">
+                        <a href="/update/{{ manga.id }}" class="button is-warning is-medium">Edit</a>
+                    </div>
+                    <div class="column is-narrow">
+                        <a href="/delete/{{ manga.id }}" class="button is-danger is-medium" onclick="return confirmDelete()">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -32,7 +32,8 @@ Some of the packages employed to do this project are:
 - pillow
 
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
+> 
 > No sleep all the packages are some of the most important
 
 
@@ -90,7 +91,8 @@ SECRET_KEY='your_generated_secret_key'
 
 ## Initiate the app
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
+> 
 > Before initiating the app would go well do the following comandes
 >
 > ``` python manage.py migrate  ```
@@ -99,10 +101,10 @@ SECRET_KEY='your_generated_secret_key'
 >
 > If we want to do an erased massive can do this comanda:
 > ``` rm db.sqlite3 ```
->
-> And next execute the 2 first comandes to go back to create the bbdd and put the data
+> 
+> And next execute the 2 first comandes to go back to create the database and put the data
 
-For engegar have to it accedire access in the folder ``MangaLibrary``
+To open you have to access to the folder called ``MangaLibrary``
 
 ```
 cd .\MangaLibrary

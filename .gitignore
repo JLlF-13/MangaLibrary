@@ -1,3 +1,4 @@
 db.sqlite3
 Mangas.json
 media
+.env

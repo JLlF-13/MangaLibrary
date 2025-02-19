@@ -4,6 +4,8 @@
 
 #### [Virtual surroundings](#virtual-surroundings-1)
 
+#### [Create .env a key](#create-env-a-key-1)
+
 #### [Initiate the app](#initiate-the-app-1)
 
 ---
@@ -73,6 +75,18 @@ deactivate
 ### Erase surroundings
 
 To erase the virtual surroundings simply erase the folder that is to create in creating the surroundings, usually only have one ```.``` To the start how what can see to the examples.
+
+## Create a .env Key
+
+Before initializing the app, you need to generate two things:
+
+1. **.env File**: Create it manually or use the command `touch .env`.
+2. **Django Secret Key**: Visit [this website](https://miniwebtool.com/django-secret-key-generator/) to generate a key.
+
+After that, add this to your `.env` file:
+```
+SECRET_KEY='your_generated_secret_key'
+```
 
 ## Initiate the app
 
